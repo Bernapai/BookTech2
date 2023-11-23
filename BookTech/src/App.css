@@ -1,0 +1,11 @@
+@font-face{
+  src: url(../src/fonts/Vogue.ttf);
+  font-family: "OficiaLetra";
+}
+nav{
+font-family: "OficiaLetra";
+}
+.container > span{
+  color: aqua;
+  padding-left: 10px;
+}
