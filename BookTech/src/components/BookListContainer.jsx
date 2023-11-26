@@ -1,13 +1,14 @@
 import { useEffect,useState } from 'react';
-import { useParams } from 'react';
+import { useParams } from 'react-router-dom';
 
 
 import Container from 'react-bootstrap/Container';
 
 import { BooksList } from '../data/Books';
-import { ItemList } from './BookList';
+import { BookList } from './BookList';
 
-export const ItemListContainer=(props)=>{
+export const BookListContainer=(props)=>{
+
     const [items, setItems] =useState([]);
    
     const { id } = useParams();
@@ -20,20 +21,19 @@ export const ItemListContainer=(props)=>{
         if(!id) {
           setItems(response)
         } else{
-          const filterByCategory= response.filter ( book => book.categoria === id
-            );
+          const filterByCategory= response.filter ( book => book.categoria == id );
             setItems(filterByCategory)
         };
         
       });
-    }, [id])
+    }, [id]);
         
     
     
     return(
        <Container className='mt-4'>
-           <h1>{props.greeting}</h1>
-           <ItemList books={BooksList}/>
+           <h1 className=" title-booktech">{props.greeting}</h1>
+           <BookList books={BooksList}/>
         </Container>
     )
 }

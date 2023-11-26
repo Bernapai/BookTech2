@@ -1,13 +1,14 @@
+import Container from "react-bootstrap/esm/Container";
 import { Book } from "./Book";
 
 
-export const ItemList = ({books}) => {
+export const BookList = ({books}) => {
     return(
-    <div className="d-flex">
+    <Container className="d-flex">
          {books.map((book) => (
              <Book key={book.id} book={book}/> 
       ))};
-    </div>
+    </Container>
     );
    };
 

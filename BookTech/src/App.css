@@ -2,10 +2,54 @@
   src: url(../src/fonts/Vogue.ttf);
   font-family: "OficiaLetra";
 }
-nav{
-font-family: "OficiaLetra";
+
+*{
+  font-family: "OficiaLetra";
 }
-.container > span{
-  color: aqua;
-  padding-left: 10px;
+
+
+.cart-number{
+color: white;
+}
+
+body{
+  background-color: black;
+}
+.white-text {
+  color: white;
+}
+.titulo-color{
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  margin-right: 220px;
+}
+.paginas-color{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 20px;
+  
+}
+.navbar-container{
+  display: flex;
+  align-items: center;
+  
+}
+.cart{
+  margin-left: 190px;
+}
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+.border-white{
+  border-color: white;
+}
+.title-booktech{
+  margin-top: 60px;
+  color: white;
+  text-align: center;
 }

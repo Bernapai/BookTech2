@@ -7,7 +7,7 @@
     price: 21,
     image:"https://images.cdn1.buscalibre.com/fit-in/360x360/da/ce/dacea40a6cf8a222be0092c9422550b3.jpg" ,
     categoria:"Javascript",
-    }
+    },
     {
     id:2,
      title: "Clean Code" ,
@@ -15,7 +15,7 @@
     price: 35,
     image:"https://images.cdn3.buscalibre.com/fit-in/360x360/10/fb/10fb170d7732b7dca25ebb81ded2572d.jpg" ,
     categoria:"Codigo",
-    }
+    },
     {
     id:3,
     title: "Javascript:The Good Parts" ,
@@ -23,7 +23,7 @@
     price: 35,
     image:"https://images.cdn2.buscalibre.com/fit-in/520x520/63/b5/918904a5b84807d8836e78c5aae60bf7.jpg" ,
     categoria:"Javascript",
-    }
+    },
     {
     id:4,
     title: "Phyton" ,
@@ -31,6 +31,23 @@
     price: 27,
     image:"https://aprenderbigdata.com/wp-content/uploads/519YsN69yEL._SX379_BO1204203200_-mejores-libros-python.jpg" ,
     categoria:"Phyton",
-        }
+    },
+    {
+    id:5,
+    title: " Think Phyton" ,
+    description: "Introducción práctica a programación con Python." ,
+    price: 40,
+    image:"https://greenteapress.com/thinkpython/think_python_comp2.medium.png" ,
+    categoria:"Phyton",
+    },
+    {
+     id:6,
+    title: "The Pragmatic Programmer" ,
+    description: "Principios prácticos para desarrolladores exitosos."     ,
+    price: 60,
+    image:"https://images.cdn2.buscalibre.com/fit-in/360x360/03/1a/031af9d7e401bb2d08911c317ecbedad.jpg" ,
+    categoria:"Codigo",
+     },
+
     
 ];
