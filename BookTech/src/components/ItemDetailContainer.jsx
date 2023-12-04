@@ -4,13 +4,25 @@ import { useParams } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 
-import { BooksList } from '../data/Books';
-import { BookDetail } from './BookDetail';
+/*import {getFirestore, getDoc, doc} from "firebase/firestore"*/
 
 
-export const BookDetailContainer = () => {
-  const [book, setItem] = useState(null);
+import { ItemDetail } from './ItemDetail';
+
+
+/*export const ItemDetailContainer = () => {
+  const [item, setItem] = useState(null);
   const { id } = useParams();
+
+  /*useEffect(()=>{
+    const db= getFirestore();
+    const refDoc= doc(db, "items", "java1");
+    getDoc(refDoc).then((snapshot) =>{
+      console.log({id: snapshot.id, ...snapshot.data()})
+    }
+    );
+   },
+   [] );
 
   useEffect(() => {
     const mipromise = new Promise((resolve, reject) => {
@@ -30,4 +42,4 @@ export const BookDetailContainer = () => {
       {book ? <BookDetail book={book} /> : <>Loading..</>}
     </Container>
   );
-};
+};*/

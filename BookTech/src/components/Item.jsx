@@ -4,18 +4,18 @@ import Card from 'react-bootstrap/Card';
 
 
 
-export const Book=({book})=>{
+export const item=({item})=>{
     return(
       <div className="card-container">
         <Card style={{ width: '18rem' }} className="border-white">
-      <Card.Img variant="top" src={book.image} />
+      <Card.Img variant="top" src={item.image} />
       <Card.Body>
-        <Card.Title>{book.title}</Card.Title>
+        <Card.Title>{item.title}</Card.Title>
         <Card.Text className="white-text">
-          {book.description}
+          {item.description}
         </Card.Text>
-     <Link to ={"/books/${book.id}"}>
-       <Button variant="primary">{book.price}USD</Button>
+     <Link to ={"/items/${item.id}"}>
+       <Button variant="primary">{item.price}USD</Button>
      </Link>
       </Card.Body>
     </Card>
