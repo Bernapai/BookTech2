@@ -31,7 +31,11 @@ export const Cart=()=>{
         });
     };
     
-    const sendOrder=()=>{
+    const sendOrder=(ev)=>{
+
+       ev.preventDefault();
+
+
        const order={
         buyer,
         items,
