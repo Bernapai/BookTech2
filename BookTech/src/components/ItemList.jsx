@@ -1,15 +1,19 @@
-import Container from "react-bootstrap/esm/Container";
+
+import {Item} from"./Item"
+import { useEffect, useState } from 'react';
+
 
 
 
 export const ItemList = ({items}) => {
     return(
-    <Container className="d-flex">
+    <div className="d-flex">
          {items.map((item) => (
              <Item key={item.id} item={item}/> 
       ))};
-    </Container>
+    </div>
     );
    };
 
 
+   

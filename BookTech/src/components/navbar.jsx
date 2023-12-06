@@ -17,9 +17,9 @@ export const NavBar= () =>{
           <NavLink to="/"className={"titulo-color"}>BookTech</NavLink>
           </Navbar.Brand>
           <Nav className="me-auto" >
-            <NavLink to="category/javascript" className={"paginas-color"}>Javascript</NavLink>
-            <NavLink to="category/code"className={"paginas-color"}>Code</NavLink>
-            <NavLink to="category/phyton"className={"paginas-color"}>Phyton</NavLink>
+            <NavLink to="categoria/javascript" className={"paginas-color"}>Javascript</NavLink>
+            <NavLink to="categoria/code"className={"paginas-color"}>Code</NavLink>
+            <NavLink to="categoria/phyton"className={"paginas-color"}>Phyton</NavLink>
           </Nav>
           <div className='cart'>
           <CartWidget/>

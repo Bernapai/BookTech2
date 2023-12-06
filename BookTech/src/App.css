@@ -5,11 +5,12 @@
 
 *{
   font-family: "OficiaLetra";
+  color: white;
 }
 
 
 .cart-number{
-color: white;
+color: rgb(255, 255, 255);
 }
 
 body{
@@ -24,12 +25,20 @@ body{
   font-size: 50px;
   margin-right: 220px;
 }
+.titulo-color:hover{
+font-size: 60px;
+
+}
+
 .paginas-color{
   color: white;
   text-decoration: none;
   font-size: 25px;
   margin-right: 20px;
   
+}
+.paginas-color:hover {
+  font-size: 30px;
 }
 .navbar-container{
   display: flex;
@@ -52,4 +61,7 @@ body{
   margin-top: 60px;
   color: white;
   text-align: center;
+}
+.Noproducts{
+  color: rgb(255, 255, 255);
 }

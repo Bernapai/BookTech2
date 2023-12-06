@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 
 
-export const item=({item})=>{
+export const Item=({item})=>{
     return(
       <div className="card-container">
         <Card style={{ width: '18rem' }} className="border-white">

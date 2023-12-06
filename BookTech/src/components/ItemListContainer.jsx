@@ -1,75 +1,39 @@
 import { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import {getFirestore,  collection, getDocs, } from "firebase/firestore"
+import {getFirestore,  collection, getDocs, Query, where } from "firebase/firestore"
 
 import Container from 'react-bootstrap/Container';
 
 
 import {  ItemList } from './ItemList';
 
-export const ItemListContainer=(props)=>{
+export const ItemListContainer = (props) => {
+  const [items, setItems] = useState([]);
+  const { id } = useParams();
 
-    const [items, setItems] =useState([]);
-   
-    const { id } = useParams();
-    console.log(id),
-    useEffect(() =>{
-      const db= getFirestore()
-      const refCollection=collection(db, "items");
+  useEffect(() => {
+    const db = getFirestore();
     
     
-      getDocs(refCollection).then((snapshot)=>{
-        if(snapshot.size===0) console.log("no results")
-        else
+    const refCollection = !id
+      ? collection(db, 'items')
+      : Query(collection(db, 'items'), where('categoria', '==', id));
+
+    getDocs(refCollection).then((snapshot) => {
+      if (snapshot.size === 0) {
+        console.log('No hay libros encontrados');
+      } else {
         setItems(
-         snapshot.docs.map((doc)=>{
-        return{id:doc.id, ...doc.data()};
-        }));
+          snapshot.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          })
+        );
       }
-      );
-    },
-      []);
-    
-    /*useEffect(() =>{
-      const dn=getFirestore(),
+    });
+  }, [id]);
 
-      const q= query(
-        collection(db, "items"),
 
-        where("categoryId", "==", "Javascript"),
-      );
-      getDocs(q).then((snapshot) =>{
-       if(snapshot.size===0)console.log("no results");
-       else
-        console.log(
-          snapshot.docs.map((doc) =>{
-            return{id:doc.id, ...doc.data()};
-          }
-          )
-          );
-      }
-       );
-    },
-      []);
-
-  
-   
-    useEffect(() =>{
-      const mipromise = new Promise((resolve, reject) =>{
-        setTimeout(() => {resolve(BooksList)}, 2000)
-      });
-      mipromise.then((response) => {
-        if(!id) {
-          setItems(response)
-        } else{
-          const filterByCategory= response.filter ( book => book.categoria == id );
-            setItems(filterByCategory)
-        };
-        
-      });
-    }, [id]);*/
-        
     
     
     return(
