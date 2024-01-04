@@ -8,7 +8,6 @@ export const CartWidget=()=>{
     const {items}= useContext(CartContext);
 
     const total= items.reduce((acumulador, valorActual)=> acumulador + valorActual.quantity, 0);
-
   
     return(
         <Link to= "/cart">

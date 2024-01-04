@@ -17,7 +17,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemListContainer greeting="Welcome To BookTech" />} />
-        <Route path="/categoria/:id" element={<ItemListContainer />} greeting="Books" />
+        <Route path="/categoria/:id" element={<ItemListContainer  greeting="Books" />} />
         <Route path="/items/:id" element={<ItemDetailContainer />} /> 
         <Route path="/cart" element={<Cart />} /> 
         <Route path="*" element={<Error404 />} />

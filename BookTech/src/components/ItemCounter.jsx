@@ -30,12 +30,12 @@ export const ItemCounter = ({ onAdd, stock, initial }) => {
       <br />
       <br />
       <div style={{display:"flex"}}>
-        <div style={{fontSize:14}} onClick={handleDecrease}>-</div>
-        <mark>{count} </mark>
-        <div style={{fontSize:14}} onClick={handleIncrease}>+</div>
+        <div style={{fontSize:14, marginRight: 10, cursor: "pointer" }} onClick={handleDecrease}>-</div>
+        <mark style={{ color: "black" }}>{count} </mark>
+        <div style={{fontSize:14, marginLeft: 10, cursor: "pointer" }} onClick={handleIncrease}>+</div>
       </div>
       <br />
-      <button onClick={handleAdd}>Agregar al carrito</button>
+      <button className="botonCompra2" onClick={handleAdd}>Agregar al carrito</button>
        
       </>
     );

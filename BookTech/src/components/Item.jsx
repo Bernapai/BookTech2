@@ -14,8 +14,8 @@ export const Item=({item})=>{
         <Card.Text className="white-text">
           {item.description}
         </Card.Text>
-     <Link to ={"/items/${item.id}"}>
-       <Button variant="primary">{item.price}USD</Button>
+     <Link to ={`/items/${item.id}`}>
+       <Button className="botonCompra" variant="primary">{item.price}USD</Button>
      </Link>
       </Card.Body>
     </Card>

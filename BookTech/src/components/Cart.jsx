@@ -15,7 +15,7 @@ email:"",
 
 export const Cart=()=>{
     const {clear, items, onRemove}=useContext(CartContext);
-
+    
     const[ buyer, setBuyer ]= useState(initialValues);
 
     const navigate=useNavigate();
@@ -56,7 +56,7 @@ export const Cart=()=>{
     };
 
 
-    if(!items.lenght){
+    if(items.lenght === 0){
         return( <Container className='mt-4'>
                    <h1 className="Noproducts">
                    No hay nada en el carrito, porfavor seleccione un producto 
@@ -76,8 +76,8 @@ export const Cart=()=>{
                     <h1>{item.title}</h1>
                     <h3>{item.price} </h3>
                     <img src={item.image} width={300} />
-                    <td> {item.quantity} </td>
-                    <td onClick={() => onRemove(item.id)}> X </td>
+                    <p> {item.quantity} </p>
+                    <p onClick={() => onRemove(item.id)}> X </p>
                     <h3>Total: {total} </h3>
                   </div>)}
                   <button onClick={clear}> Vaciar Carrito</button>
